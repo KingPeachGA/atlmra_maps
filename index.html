@@ -4,11 +4,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A mapset of visited states">
+    <meta name="description" content="A visual map tracking US states Morgan has visited, built with MapLibre GL JS and Bootstrap.">
     <meta name="author" content="Chris Allen">
     <meta name="generator" content="Astro v5.7.10">
     <title>ATLMRA Visited States</title>
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
+    <link rel="canonical" href="https://kingpeachga.github.io/atlmra_maps">
+
+    <meta property="og:title" content="ATLMRA Visited States Map">
+    <meta property="og:description" content="Track US states visited on this interactive map!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kingpeachga.github.io/atlmra_maps/"> 
+    <meta property="og:image" content="https://kingpeachga.github.io/atlmra_maps/assets/img/mra_mono.jpg"> 
+    <meta property="og:image:width" content="1200"> 
+    <meta property="og:image:height" content="630"> 
+    <meta property="og:site_name" content="atlmra_maps">
+
+    <meta name="twitter:card" content="summary_large_image"> 
+    <meta name="twitter:title" content="My Visited States Map">
+    <meta name="twitter:description" content="Track US states visited on this interactive map!">
+    <meta name="twitter:image" content="https://kingpeachga.github.io/atlmra_maps/assets/img/mra_mono.jpg"> {/* <-- SAME PREVIEW IMAGE */}
+    <meta name="twitter:site" content="@atlcra">
+    <meta name="twitter:creator" content="@atlcra">
+
     <script src="js/color-modes.js"></script>
     <link href="css/dashboard.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -178,81 +195,21 @@
                     aria-labelledby="sidebarMenuLabel">
                     <div class="offcanvas-header">
                         <img src="assets/img/mra_mono.jpeg" alt="logo" class="img-fluid" width="50px">
-                        <h5 class="offcanvas-title" id="sidebarMenuLabel">ATLMTA</h5> <button type="button"
+                        <h5 class="offcanvas-title" id="sidebarMenuLabel"> ATLMRA</h5> <button type="button"
                             class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
                             aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
                         <ul class="nav flex-column">
                             <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2 active"
-                                    aria-current="page" href="#"> <svg class="bi" aria-hidden="true">
+                                    aria-current="page" href="index.html"> <svg class="bi" aria-hidden="true">
                                         <use xlink:href="#house-fill"></use>
                                     </svg>
                                     Dashboard
                                 </a> </li>
-                            <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="#"> <svg
-                                        class="bi" aria-hidden="true">
-                                        <use xlink:href="#file-earmark"></use>
-                                    </svg>
-                                    Orders
-                                </a> </li>
-                            <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="#"> <svg
-                                        class="bi" aria-hidden="true">
-                                        <use xlink:href="#cart"></use>
-                                    </svg>
-                                    Products
-                                </a> </li>
-                            <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="#"> <svg
-                                        class="bi" aria-hidden="true">
-                                        <use xlink:href="#people"></use>
-                                    </svg>
-                                    Customers
-                                </a> </li>
-                            <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="#"> <svg
-                                        class="bi" aria-hidden="true">
-                                        <use xlink:href="#graph-up"></use>
-                                    </svg>
-                                    Reports
-                                </a> </li>
-                            <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="#"> <svg
-                                        class="bi" aria-hidden="true">
-                                        <use xlink:href="#puzzle"></use>
-                                    </svg>
-                                    Integrations
-                                </a> </li>
+                            
                         </ul>
-                        <h6
-                            class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
-                            <span>Saved reports</span> <a class="link-secondary" href="#" aria-label="Add a new report">
-                                <svg class="bi" aria-hidden="true">
-                                    <use xlink:href="#plus-circle"></use>
-                                </svg> </a> </h6>
-                        <ul class="nav flex-column mb-auto">
-                            <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="#"> <svg
-                                        class="bi" aria-hidden="true">
-                                        <use xlink:href="#file-earmark-text"></use>
-                                    </svg>
-                                    Current month
-                                </a> </li>
-                            <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="#"> <svg
-                                        class="bi" aria-hidden="true">
-                                        <use xlink:href="#file-earmark-text"></use>
-                                    </svg>
-                                    Last quarter
-                                </a> </li>
-                            <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="#"> <svg
-                                        class="bi" aria-hidden="true">
-                                        <use xlink:href="#file-earmark-text"></use>
-                                    </svg>
-                                    Social engagement
-                                </a> </li>
-                            <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="#"> <svg
-                                        class="bi" aria-hidden="true">
-                                        <use xlink:href="#file-earmark-text"></use>
-                                    </svg>
-                                    Year-end sale
-                                </a> </li>
-                        </ul>
+                        
                         <hr class="my-3">
                         <div class="navbar-nav">
                             <div class="nav-item text-nowrap">
