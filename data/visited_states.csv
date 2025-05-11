@@ -1,15 +1,15 @@
 id,state_name,visited_status,visit_count,last_visit_date,all_visit_dates
 AL,Alabama,false,0,,
 AK,Alaska,false,0,,
-AZ,Arizona,true,1,2025-05-01,"2025-05-01"
+AZ,Arizona,true,1,2025-04-28,2025-04-28
 AR,Arkansas,false,0,,
-CA,California,true,1,2025-05-02,"2025-05-02"
+CA,California,true,1,2025-04-29,2025-04-29
 CO,Colorado,false,0,,
 CN,Connecticut,false,0,,
 DE,Delaware,false,0,,
-DC,District of Columbia,true,1,2025-02-15,"2025-02-15"
-FL,Florida,true,1,2022-11-20,"2022-11-20"
-GA,Georgia,true,5,2024-12-25,"2019-01-01;2020-03-10;2021-07-04;2023-05-05;2024-12-25"
+DC,District of Columbia,true,1,2025-02-15,2025-02-15
+FL,Florida,true,1,2025-04-16,2025-04-16
+GA,Georgia,true,5,2024-12-25,2019-01-01;2020-03-10;2021-07-04;2023-05-05;2024-12-25
 GU,Guam,false,0,,
 HI,Hawaii,false,0,,
 ID,Idaho,false,0,,
@@ -17,14 +17,14 @@ IL,Illinois,false,0,,
 IN,Indiana,false,0,,
 IA,Iowa,false,0,,
 KS,Kansas,false,0,,
-KY,Kentucky,false,0,,
+KY,Kentucky,true,1,2025-02-28,2025-02-28
 LA,Louisiana,false,0,,
 ME,Maine,false,0,,
 MD,Maryland,false,0,,
 MA,Massachusetts,false,0,,
-MI,Michigan,true,1,2025-03-16,"2025-03-16"
-MN,Minnesota,true,1,2025-05-12,"2025-05-12"
-MS,Mississippi,true,1,2025-04-06,"2025-04-06"
+MI,Michigan,true,1,2025-04-02,2025-04-02
+MN,Minnesota,true,1,2025-05-12,2025-05-12
+MS,Mississippi,true,1,2025-04-11,2025-04-11
 MO,Missouri,false,0,,
 MT,Montana,false,0,,
 NE,Nebraska,false,0,,
@@ -33,18 +33,18 @@ NH,New Hampshire,false,0,,
 NJ,New Jersey,false,0,,
 NM,New Mexico,false,0,,
 NY,New York,false,0,,
-NC,North Carolina,true,1,2025-03-18,"2025-03-18"
+NC,North Carolina,true,1,2025-03-18,2025-03-18
 ND,North Dakota,false,0,,
 MP,Northern Mariana Islands,false,0,,
 OH,Ohio,false,0,,
 OK,Oklahoma,false,0,,
-OR,Oregon,true,1,2025-04-30,"2025-04-30"
+OR,Oregon,true,1,2025-05-02,2025-05-02
 PA,Pennsylvania,false,0,,
 PR,Puerto Rico,false,0,,
 RI,Rhode Island,false,0,,
 SC,South Carolina,false,0,,
 SD,South Dakota,false,0,,
-TN,Tennessee,true,1,2025-03-17,"2025-03-17"
+TN,Tennessee,true,1,2025-03-17,2025-03-17
 TX,Texas,false,0,,
 TT,Trust Territories,false,0,,
 UT,Utah,false,0,,
