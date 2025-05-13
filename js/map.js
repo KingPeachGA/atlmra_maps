@@ -181,24 +181,24 @@ document.addEventListener('DOMContentLoaded', function () {
         const fillColorExpression = ['match', ['get', geojsonStateNameProperty]];
 
         window.visitedStatesData.forEach(stateDataFromCsv => {
-            if (stateDataFromCsv.state_name) { // Ensure state_name exists in CSV row
-                // Example: Darker green for multiple visits, lighter green for one, light gray for not visited
+            if (stateDataFromCsv && stateDataFromCsv.state_name) {
                 let color = '#adadad'; // Default: LightGray (not visited)
-                if (stateDataFromCsv.trip_status === 'visited') {
+                if (stateDataFromCsv.trip_status === 'visited') { // This is an IF
                     const visitCount = parseInt(stateDataFromCsv.visit_count, 10);
-                    if (visitCount > 1) {
+                        if (visitCount > 1) { // Nested IF
                         color = '#162e51'; // vads-button-color-text-secondary-active-on-light vads-color-primary-darkest (multiple visits)
                     } else if (visitCount === 1) {
                         color = '#58b4ff'; // vads-color-action-surface-default-on-dark blue-30v (single visit)
                     } else {
                         color = '#90EE90'; // LightGreen (visited but count is 0 or invalid, treat as visited)
-                    } else if (stateDataFromCsv.trip_status === 'planned') {
+                    } 
+                }else if (stateDataFromCsv.trip_status === 'planned') {
             color = '#f3cf45'; // VA Gold
             // Alternatively, for patterned fills (more complex):
             // You might need to add a new layer for patterns or use advanced MapLibre styling.
             // For simplicity, let's stick to solid colors first.
         }
-                }
+                
                 fillColorExpression.push(stateDataFromCsv.state_name, color);
             }
         });
