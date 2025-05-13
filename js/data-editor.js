@@ -170,7 +170,7 @@ window.initializeDataEditorWithGeoJSON = function(geojsonData) {
                 return;
             }
             // Ensure all objects have the same headers in the same order for Papa.unparse
-            const headers = ["id", "state_name", "visited_status", "visit_count", "last_visit_date", "all_visit_dates"];
+            const headers = ["id", "state_name", "visited_status", "trip_status", "visit_count", "last_visit_date", "all_visit_dates"];
             const csvString = Papa.unparse(window.visitedStatesData, {
                 columns: headers, // Specify column order
                 header: true
