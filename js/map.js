@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (stateDataFromCsv.state_name) { // Ensure state_name exists in CSV row
                 // Example: Darker green for multiple visits, lighter green for one, light gray for not visited
                 let color = '#adadad'; // Default: LightGray (not visited)
-                if (stateDataFromCsv.visited_status === 'true') {
+                if (stateDataFromCsv.trip_status === 'visited') {
                     const visitCount = parseInt(stateDataFromCsv.visit_count, 10);
                     if (visitCount > 1) {
                         color = '#162e51'; // vads-button-color-text-secondary-active-on-light vads-color-primary-darkest (multiple visits)
@@ -185,7 +185,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         color = '#58b4ff'; // vads-color-action-surface-default-on-dark blue-30v (single visit)
                     } else {
                         color = '#90EE90'; // LightGreen (visited but count is 0 or invalid, treat as visited)
-                    }
+                    } else if (stateDataFromCsv.trip_status === 'planned') {
+            color = '#f3cf45'; // VA Gold
+            // Alternatively, for patterned fills (more complex):
+            // You might need to add a new layer for patterns or use advanced MapLibre styling.
+            // For simplicity, let's stick to solid colors first.
+        }
                 }
                 fillColorExpression.push(stateDataFromCsv.state_name, color);
             }
