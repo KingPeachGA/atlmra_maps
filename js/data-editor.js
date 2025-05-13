@@ -52,7 +52,7 @@ function loadStateDataToForm(selectedStateName) {
         visitCountInput.value = stateData.visit_count || '0';
         lastVisitDateInput.value = stateData.last_visit_date || '';
         allVisitDatesTextarea.value = stateData.all_visit_dates || '';
-        tripStatusSelect.value = stateData.trip_status || 'not_visited;
+        tripStatusSelect.value = stateData.trip_status || 'not_visited';
     } else {
         // State not found in CSV (e.g., newly selected from GeoJSON but not yet in our data)
         // Default to unvisited
