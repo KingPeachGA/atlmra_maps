@@ -110,12 +110,19 @@ document.addEventListener('DOMContentLoaded', function () {
             let popupContent = `<h5 class="mb-2" style="color: #333;">${stateName}</h5>`;
 
             if (stateData) {
-                popupContent += `<p class="mb-1"><strong>Status:</strong> ${stateData.visited_status === 'true' ? '<span style="color: green; font-weight: bold;">Visited</span>' : '<span style="color: orange;">Not Visited</span>'}</p>`;
-                if (stateData.visited_status === 'true') {
+                let statusDisplay = "Not Visited";
+                    if (stateData.trip_status === 'visited') statusDisplay = '<span style="color: green; font-weight: bold;">Visited</span>';
+                    if (stateData.trip_status === 'planned') statusDisplay = '<span style="color: #DAA520; font-weight: bold;">Planned</span>'; // Darker Yellow
+
+                popupContent += `<p class="mb-1"><strong>Status:</strong> ${statusDisplay}</p>`;
+                if (stateData.trip_status === 'visited') { // Only show visit details if actually visited
                     popupContent += `<p class="mb-1"><strong>Visit Count:</strong> ${stateData.visit_count || 0}</p>`;
                     popupContent += `<p class="mb-1"><strong>Last Visit:</strong> ${stateData.last_visit_date || 'N/A'}</p>`;
                     const allVisits = stateData.all_visit_dates ? stateData.all_visit_dates.split(';').join(', ') : 'N/A';
                     popupContent += `<p class="mb-0"><strong>All Visits:</strong> ${allVisits}</p>`;
+                } else if (stateData.trip_status === 'planned') {
+                                    // Optionally show planned date if you add that to your CSV/form
+                     popupContent += `<p class="mb-1"><strong>Planned Visit Date:</strong> ${stateData.last_visit_date || 'N/A'}</p>`; // Assuming last_visit_date can be used for planned date
                 }
             } else {
                 popupContent += "<p class='mb-1'>No visit data recorded for this state.</p>";
@@ -176,19 +183,24 @@ document.addEventListener('DOMContentLoaded', function () {
         const fillColorExpression = ['match', ['get', geojsonStateNameProperty]];
 
         window.visitedStatesData.forEach(stateDataFromCsv => {
-            if (stateDataFromCsv.state_name) { // Ensure state_name exists in CSV row
-                // Example: Darker green for multiple visits, lighter green for one, light gray for not visited
+            if (stateDataFromCsv && stateDataFromCsv.state_name) {
                 let color = '#adadad'; // Default: LightGray (not visited)
-                if (stateDataFromCsv.visited_status === 'true') {
+                if (stateDataFromCsv.trip_status === 'visited') { // This is an IF
                     const visitCount = parseInt(stateDataFromCsv.visit_count, 10);
-                    if (visitCount > 1) {
+                        if (visitCount > 1) { // Nested IF
                         color = '#162e51'; // vads-button-color-text-secondary-active-on-light vads-color-primary-darkest (multiple visits)
                     } else if (visitCount === 1) {
                         color = '#58b4ff'; // vads-color-action-surface-default-on-dark blue-30v (single visit)
                     } else {
                         color = '#90EE90'; // LightGreen (visited but count is 0 or invalid, treat as visited)
-                    }
-                }
+                    } 
+                }else if (stateDataFromCsv.trip_status === 'planned') {
+            color = '#f3cf45'; // VA Gold
+            // Alternatively, for patterned fills (more complex):
+            // You might need to add a new layer for patterns or use advanced MapLibre styling.
+            // For simplicity, let's stick to solid colors first.
+        }
+                
                 fillColorExpression.push(stateDataFromCsv.state_name, color);
             }
         });

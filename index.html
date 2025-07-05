@@ -279,6 +279,15 @@
                                     {/* Options will be populated by JavaScript */}
                                 </select>
                             </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3"> 
+                                    <label for="tripStatusSelect" class="form-label">Trip Status:</label>
+                                    <select class="form-select" id="tripStatusSelect">
+                                        <option value="not_visited">Not Visited</option>
+                                        <option value="planned">Planned</option>
+                                        <option value="visited">Visited</option>
+                                    </select>
+                                </div>
                             <div class="col-md-6 mb-3 d-flex align-items-end">
                                 <div class="form-check form-switch mb-2">
                                     <input type="checkbox" class="form-check-input" id="visitedStatus" role="switch">
@@ -306,12 +315,19 @@
                             <div class="form-text">Enter dates in YYYY-MM-DD format, separated by a semicolon if
                                 multiple.</div>
                         </div>
+<<<<<<< HEAD
 
                         <button type="submit" class="btn btn-primary">Update State Data</button>
                         <button type="button" class="btn btn-info ms-2" id="downloadCsvButton">Download Updated
                             CSV</button>
                         <button type="button" class="btn btn-secondary ms-2" id="clearEditFormButton">Clear
                             Form</button>
+=======
+            
+                        <button type="submit" class="btn col-3 btn-primary">Update State Data</button>
+                        <button type="button" class="btn col-3 btn-info ms-2" id="downloadCsvButton">Download Updated CSV</button>
+                        <button type="button" class="btn col-3 btn-secondary ms-2" id="clearEditFormButton">Clear Form</button>
+>>>>>>> 10ea01c4c511be0e374c752b083c06c078e820f4
                     </form>
                 </div>
 
@@ -326,5 +342,10 @@
     <script src="js/auth.js"></script>
     <script src="js/sidebar.js"></script>
 </body>
+<<<<<<< HEAD
 
 </html>
+=======
+</html>
+    
+>>>>>>> 10ea01c4c511be0e374c752b083c06c078e820f4

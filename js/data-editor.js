@@ -36,6 +36,7 @@ function loadStateDataToForm(selectedStateName) {
     const visitCountInput = document.getElementById('visitCount');
     const lastVisitDateInput = document.getElementById('lastVisitDate');
     const allVisitDatesTextarea = document.getElementById('allVisitDates');
+    const tripStatusSelect = document.getElementById('tripStatusSelect');
 
     if (!selectedStateName) { // Clear form if no state is selected (e.g., "-- Select a State --")
         clearEditFormFields();
@@ -51,6 +52,7 @@ function loadStateDataToForm(selectedStateName) {
         visitCountInput.value = stateData.visit_count || '0';
         lastVisitDateInput.value = stateData.last_visit_date || '';
         allVisitDatesTextarea.value = stateData.all_visit_dates || '';
+        tripStatusSelect.value = stateData.trip_status || 'not_visited';
     } else {
         // State not found in CSV (e.g., newly selected from GeoJSON but not yet in our data)
         // Default to unvisited
@@ -58,6 +60,7 @@ function loadStateDataToForm(selectedStateName) {
         visitCountInput.value = '0';
         lastVisitDateInput.value = '';
         allVisitDatesTextarea.value = '';
+        tripStatusSelect.value = 'not_visited';
     }
 }
 
@@ -145,6 +148,7 @@ window.initializeDataEditorWithGeoJSON = function(geojsonData) {
         stateData.visit_count = document.getElementById('visitCount').value || '0';
         stateData.last_visit_date = document.getElementById('lastVisitDate').value || '';
         stateData.all_visit_dates = document.getElementById('allVisitDates').value.trim() || '';
+        stateData.trip_status = document.getElementById('tripStatusSelect').value;
 
         console.log(`Data Editor: ${selectedStateName} data updated locally:`, stateData);
         alert(`${selectedStateName} data has been updated locally. Remember to download the CSV to save your changes permanently.`);
@@ -166,7 +170,7 @@ window.initializeDataEditorWithGeoJSON = function(geojsonData) {
                 return;
             }
             // Ensure all objects have the same headers in the same order for Papa.unparse
-            const headers = ["id", "state_name", "visited_status", "visit_count", "last_visit_date", "all_visit_dates"];
+            const headers = ["id", "state_name", "visited_status", "trip_status", "visit_count", "last_visit_date", "all_visit_dates"];
             const csvString = Papa.unparse(window.visitedStatesData, {
                 columns: headers, // Specify column order
                 header: true
