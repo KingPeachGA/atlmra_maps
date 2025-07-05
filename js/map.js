@@ -68,6 +68,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     } else {
                         console.warn("map.js: initializeDataEditorWithGeoJSON function not found. Edit form may not work.");
                     }
+                    // Call sidebar update after initial data load
+                    if (typeof window.updateSidebarCards === 'function') {window.updateSidebarCards();}
                 },
                 error: function(error, file) {
                     console.error("map.js: Error parsing CSV:", error, file);
@@ -213,6 +215,9 @@ document.addEventListener('DOMContentLoaded', function () {
             addOrUpdateStatesLayer(); // Re-applies styles based on current window.visitedStatesData
         } else {
             console.warn("map.js: Map, visitedStatesData, or states-source not ready for refreshMapLayer.");
+        }
+        if (typeof window.updateSidebarCards === 'function') {
+            window.updateSidebarCards();
         }
     };
 

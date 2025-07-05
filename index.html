@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A visual map tracking US states Morgan has visited, built with MapLibre GL JS and Bootstrap.">
+    <meta name="description"
+        content="A visual map tracking US states Morgan has visited, built with MapLibre GL JS and Bootstrap.">
     <meta name="author" content="Chris Allen">
     <meta name="generator" content="Astro v5.7.10">
     <title>ATLMRA Visited States</title>
@@ -13,13 +14,13 @@
     <meta property="og:title" content="ATLMRA Visited States Map">
     <meta property="og:description" content="Track US states visited on this interactive map!">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kingpeachga.github.io/atlmra_maps/"> 
-    <meta property="og:image" content="https://kingpeachga.github.io/atlmra_maps/assets/img/mra_mono.jpg"> 
-    <meta property="og:image:width" content="1200"> 
-    <meta property="og:image:height" content="630"> 
+    <meta property="og:url" content="https://kingpeachga.github.io/atlmra_maps/">
+    <meta property="og:image" content="https://kingpeachga.github.io/atlmra_maps/assets/img/mra_mono.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="atlmra_maps">
 
-    <meta name="twitter:card" content="summary_large_image"> 
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="My Visited States Map">
     <meta name="twitter:description" content="Track US states visited on this interactive map!">
     <meta name="twitter:image" content="https://kingpeachga.github.io/atlmra_maps/assets/img/mra_mono.jpg">
@@ -30,7 +31,7 @@
     <link href="css/dashboard.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' /> 
+    <link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' />
     </style>
 </head>
 
@@ -57,7 +58,7 @@
             </path>
         </symbol>
     </svg>
-    
+
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"> <button
             class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
             aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"> <svg
@@ -171,7 +172,8 @@
         </symbol>
     </svg>
     <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark"> <a
-            class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#"><img src="assets/img/mra_mono.jpeg" class="navbar-brand img-thumbnail" style="height: 50px;">  ATLMRA</a>
+            class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#"><img
+                src="assets/img/mra_mono.jpeg" class="navbar-brand img-thumbnail" style="height: 50px;"> ATLMRA</a>
         <ul class="navbar-nav flex-row d-md-none">
             <li class="nav-item text-nowrap"> <button class="nav-link px-3 text-white" type="button"
                     data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch"
@@ -207,27 +209,50 @@
                                     </svg>
                                     Dashboard
                                 </a> </li>
-                            
+
                         </ul>
-                        
+                        <div class="card m-4 rounded-3 shadow-sm">
+                            <div class="card-header py-3">
+                                <h4 class="my-0 fw-normal">Days since February 5, 2025</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 id="days-since-counter" class="card-title pricing-card-title">0<small
+                                        class="text-body-secondary fw-light"> days</small></h1>
+                                
+                            </div>
+                        </div>
+
+                        <div class="card m-4 rounded-3 shadow-sm">
+                            <div class="card-header py-3">
+                                <h4 class="my-0 fw-normal">States Visited</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 id="states-visited-counter" class="card-title pricing-card-title">0<small
+                                        class="text-body-secondary fw-light">/50</small></h1>
+                                
+                            </div>
+                        </div>
+
                         <hr class="my-3">
                         <div class="navbar-nav">
                             <div class="nav-item text-nowrap">
-                              
-                              <a class="nav-link px-3" href="sign-in.html" id="signInLink" style="display: none;">Sign In</a>
-                              <a class="nav-link px-3" href="#" id="signOutLink" style="display: none;">Sign Out</a>
+
+                                <a class="nav-link px-3" href="sign-in.html" id="signInLink" style="display: none;">Sign
+                                    In</a>
+                                <a class="nav-link px-3" href="#" id="signOutLink" style="display: none;">Sign Out</a>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                  <h1 class="h2">Visited States Dashboard</h1>
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Visited States Dashboard</h1>
                 </div>
-                                                     
+
                 <div id='map' style='width: 100%; height: 600px;'></div>
-              
+
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
                         <thead>
@@ -240,9 +265,10 @@
                         <tbody id="data-table">
                             <!-- Data will be populated here -->
                         </tbody>
-                    </table>   
+                    </table>
                 </div>
-                <div id="editControlsContainer" style="display:none; padding: 20px; background-color: #f8f9fa; border-radius: 8px; margin-top: 25px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <div id="editControlsContainer"
+                    style="display:none; padding: 20px; background-color: #f8f9fa; border-radius: 8px; margin-top: 25px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                     <h3 class="mb-3">Edit Visited State Details</h3>
                     <form id="editStateForm">
                         <div class="row">
@@ -260,7 +286,7 @@
                                 </div>
                             </div>
                         </div>
-            
+
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="visitCount" class="form-label">Number of Visits:</label>
@@ -271,16 +297,21 @@
                                 <input type="date" class="form-control" id="lastVisitDate">
                             </div>
                         </div>
-            
+
                         <div class="mb-3">
-                            <label for="allVisitDates" class="form-label">All Visit Dates (YYYY-MM-DD; separated by semicolon):</label>
-                            <textarea class="form-control" id="allVisitDates" rows="2" placeholder="e.g., 2023-01-15;2024-05-10"></textarea>
-                            <div class="form-text">Enter dates in YYYY-MM-DD format, separated by a semicolon if multiple.</div>
+                            <label for="allVisitDates" class="form-label">All Visit Dates (YYYY-MM-DD; separated by
+                                semicolon):</label>
+                            <textarea class="form-control" id="allVisitDates" rows="2"
+                                placeholder="e.g., 2023-01-15;2024-05-10"></textarea>
+                            <div class="form-text">Enter dates in YYYY-MM-DD format, separated by a semicolon if
+                                multiple.</div>
                         </div>
-            
+
                         <button type="submit" class="btn btn-primary">Update State Data</button>
-                        <button type="button" class="btn btn-info ms-2" id="downloadCsvButton">Download Updated CSV</button>
-                        <button type="button" class="btn btn-secondary ms-2" id="clearEditFormButton">Clear Form</button>
+                        <button type="button" class="btn btn-info ms-2" id="downloadCsvButton">Download Updated
+                            CSV</button>
+                        <button type="button" class="btn btn-secondary ms-2" id="clearEditFormButton">Clear
+                            Form</button>
                     </form>
                 </div>
 
@@ -292,7 +323,8 @@
     <script src="js/papaparse.min.js"></script>
     <script src="js/data-editor.js"></script>
     <script src="js/map.js"></script>
-    <script src="js/auth.js"></script> 
+    <script src="js/auth.js"></script>
+    <script src="js/sidebar.js"></script>
 </body>
+
 </html>
-    
