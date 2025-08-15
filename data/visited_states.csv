@@ -49,7 +49,7 @@ TX	Texas	TRUE	visited	1	7/9/2025	7/9/2025
 TT	Trust Territories	FALSE	not_visited	0		
 UT	Utah	FALSE	not_visited	0		
 VT	Vermont	FALSE	not_visited	0		
-VA	Virginia	TRUE	visited	2	2/14/2025	2025-02-01,2025-02-14
+VA	Virginia	TRUE	visited	2	2/14/2025	2025-02-01;2025-02-14
 VI	Virgin Islands	FALSE	not_visited	0		
 WA	Washington	FALSE	not_visited	0		
 WV	West Virginia	FALSE	not_visited	0		
