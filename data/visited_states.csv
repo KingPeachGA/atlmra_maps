@@ -1,57 +1,57 @@
-id,state_name,visited_status,trip_status,visit_count,last_visit_date,all_visit_dates
-AL,Alabama,false,not_visited,0,,
-AK,Alaska,false,not_visited,0,,
-AZ,Arizona,true,visited,1,2025-04-28,2025-04-28
-AR,Arkansas,false,not_visited,0,,
-CA,California,true,visited,1,2025-04-29,2025-04-29
-CO,Colorado,false,not_visited,0,,
-CN,Connecticut,false,not_visited,0,,
-DE,Delaware,false,not_visited,0,,
-DC,District of Columbia,true,visited,1,2025-02-15,2025-02-15
-FL,Florida,true,visited,1,2025-04-16,2025-04-16
-GA,Georgia,true,visited,5,2024-12-25,2019-01-01;2020-03-10;2021-07-04;2023-05-05;2024-12-25
-GU,Guam,false,not_visited,0,,
-HI,Hawaii,false,not_visited,0,,
-ID,Idaho,false,not_visited,0,,
-IL,Illinois,false,not_visited,0,,
-IN,Indiana,false,not_visited,0,,
-IA,Iowa,false,not_visited,0,,
-KS,Kansas,false,not_visited,0,,
-KY,Kentucky,true,visited,1,2025-02-28,2025-02-28
-LA,Louisiana,false,not_visited,0,,
-ME,Maine,false,not_visited,0,,
-MD,Maryland,false,not_visited,0,,
-MA,Massachusetts,false,not_visited,0,,
-MI,Michigan,true,visited,1,2025-04-02,2025-04-02
-MN,Minnesota,true,visited,1,2025-05-12,2025-05-12
-MS,Mississippi,true,visited,1,2025-04-11,2025-04-11
-MO,Missouri,false,not_visited,0,,
-MT,Montana,false,not_visited,0,,
-NE,Nebraska,false,not_visited,0,,
-NV,Nevada,false,not_visited,0,,
-NH,New Hampshire,false,not_visited,0,,
-NJ,New Jersey,false,not_visited,0,,
-NM,New Mexico,false,not_visited,0,,
-NY,New York,false,not_visited,0,,
-NC,North Carolina,true,visited,1,2025-03-18,2025-03-18
-ND,North Dakota,false,not_visited,0,,
-MP,Northern Mariana Islands,false,not_visited,0,,
-OH,Ohio,false,not_visited,0,,
-OK,Oklahoma,false,not_visited,0,,
-OR,Oregon,true,visited,1,2025-05-02,2025-05-02
-PA,Pennsylvania,false,not_visited,0,,
-PR,Puerto Rico,false,not_visited,0,,
-RI,Rhode Island,false,not_visited,0,,
-SC,South Carolina,false,not_visited,0,,
-SD,South Dakota,false,not_visited,0,,
-TN,Tennessee,true,visited,1,2025-03-17,2025-03-17
-TX,Texas,false,not_visited,0,,
-TT,Trust Territories,false,not_visited,0,,
-UT,Utah,false,not_visited,0,,
-VT,Vermont,false,not_visited,0,,
-VA,Virginia,true,visited,2,2025-02-14,"2025-02-01,2025-02-14"
-VI,Virgin Islands,false,not_visited,0,,
-WA,Washington,false,not_visited,0,,
-WV,West Virginia,false,not_visited,0,,
-WI,Wisconsin,false,not_visited,0,,
-WY,Wyoming,false,not_visited,0,,
+id	state_name	visited_status	trip_status	visit_count	last_visit_date	all_visit_dates
+AL	Alabama	FALSE	not_visited	0		
+AK	Alaska	FALSE	not_visited	0		
+AZ	Arizona	TRUE	visited	1	4/28/2025	4/28/2025
+AR	Arkansas	FALSE	not_visited	0		
+CA	California	TRUE	visited	1	4/29/2025	4/29/2025
+CO	Colorado	FALSE	not_visited	0		
+CN	Connecticut	FALSE	not_visited	0		
+DE	Delaware	FALSE	not_visited	0		
+DC	District of Columbia	TRUE	visited	1	2/15/2025	2/15/2025
+FL	Florida	TRUE	visited	1	4/16/2025	4/16/2025
+GA	Georgia	TRUE	visited	5	12/25/2024	2019-01-01;2020-03-10;2021-07-04;2023-05-05;2024-12-25
+GU	Guam	FALSE	not_visited	0		
+HI	Hawaii	FALSE	not_visited	0		
+ID	Idaho	FALSE	not_visited	0		
+IL	Illinois	TRUE	visited	1	5/28/2025	5/28/2025
+IN	Indiana	TRUE	visited	1	5/29/2025	5/29/2025
+IA	Iowa	FALSE	not_visited	0		
+KS	Kansas	FALSE	not_visited	0		
+KY	Kentucky	TRUE	visited	1	2/28/2025	2/28/2025
+LA	Louisiana	FALSE	not_visited	0		
+ME	Maine	FALSE	not_visited	0		
+MD	Maryland	FALSE	not_visited	0		
+MA	Massachusetts	FALSE	not_visited	0		
+MI	Michigan	TRUE	visited	1	4/2/2025	4/2/2025
+MN	Minnesota	TRUE	visited	1	5/12/2025	5/12/2025
+MS	Mississippi	TRUE	visited	1	4/11/2025	4/11/2025
+MO	Missouri	TRUE	visited	1	5/27/2025	5/27/2025
+MT	Montana	FALSE	not_visited	0		
+NE	Nebraska	FALSE	not_visited	0		
+NV	Nevada	TRUE	visited	1	8/10/2025	8/10/2025
+NH	New Hampshire	FALSE	not_visited	0		
+NJ	New Jersey	FALSE	not_visited	0		
+NM	New Mexico	FALSE	not_visited	0		
+NY	New York	TRUE	visited	1	6/18/2025	6/18/2025
+NC	North Carolina	TRUE	visited	2	7/30/2025	2025-03-18;2025-07-30
+ND	North Dakota	FALSE	not_visited	0		
+MP	Northern Mariana Islands	FALSE	not_visited	0		
+OH	Ohio	TRUE	visited	1	8/12/2025	8/12/2025
+OK	Oklahoma	FALSE	not_visited	0		
+OR	Oregon	TRUE	visited	1	5/2/2025	5/2/2025
+PA	Pennsylvania	FALSE	not_visited	0		
+PR	Puerto Rico	FALSE	not_visited	0		
+RI	Rhode Island	FALSE	not_visited	0		
+SC	South Carolina	FALSE	not_visited	0		
+SD	South Dakota	FALSE	not_visited	0		
+TN	Tennessee	TRUE	visited	1	3/17/2025	3/17/2025
+TX	Texas	TRUE	visited	1	7/9/2025	7/9/2025
+TT	Trust Territories	FALSE	not_visited	0		
+UT	Utah	FALSE	not_visited	0		
+VT	Vermont	FALSE	not_visited	0		
+VA	Virginia	TRUE	visited	2	2/14/2025	2025-02-01,2025-02-14
+VI	Virgin Islands	FALSE	not_visited	0		
+WA	Washington	FALSE	not_visited	0		
+WV	West Virginia	FALSE	not_visited	0		
+WI	Wisconsin	FALSE	not_visited	0		
+WY	Wyoming	FALSE	not_visited	0		
